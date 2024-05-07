@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./navbar.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Coding Addict</h1>
+        <ul class="links" >
+            <li>
+                <a href="#">Contacts</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Project</a>
+            </li>
+            <li>
+                <a href="#">Home</a>
+            </li>
+        </ul>
+        
+        <div class="menubar">
+            <i class="fa fa-bars" style="font-size:24px" ></i>
+        </div>
+    </nav>
+</body>
+<!-- <script src="./navbar.js"></script> -->
+<script>
+    const toggleMenu = () => {
+    links.classList.toggle("code");
+    let shoemenu = menubar.firstElementChild;
+    if (links.classList.contains("code")) {
+        shoemenu.classList.replace("fa-bars", "fa-close");
+    } else {
+        shoemenu.classList.replace("fa-close", "fa-bars");
+    }
+}
+
+const menubar = document.querySelector(".menubar");
+const links = document.querySelector(".links");
+menubar.addEventListener('click', toggleMenu);
+</script>
+
+</html>
